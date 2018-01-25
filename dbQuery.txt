@@ -1,0 +1,4 @@
+create table school(universityID bigserial, universityName text, accreditation text, residentTuition text, nonResidentTuition text, address text, primary key(universityID))
+
+create table course(universityID bigserial, courseID text, description text, credits text, startDate text, endDate text, primary key(universityID,courseID),
+                    foreign key(universityID) references school(universityID))
